@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adtof-plus-drum-transcription"
+version = "0.1.0"
+description = "Drum transcription using ADTOF and MDX23C models"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["audio", "music", "drums", "transcription", "midi", "machine-learning"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "mdx23c-drum-separation @ git+https://github.com/xavriley/mdx23c-drum-separation.git",
+    "adtof-pytorch @ git+https://github.com/xavriley/ADTOF-pytorch.git", 
+    "pretty-midi>=0.2.8",
+    "numpy>=1.19.0",
+    "essentia>=2.1b6.dev609",
+    "scipy>=1.6.0",
+    "tqdm>=4.62.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "isort>=5.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/adtof-plus-drum-transcription"
+Repository = "https://github.com/yourusername/adtof-plus-drum-transcription"
+Issues = "https://github.com/yourusername/adtof-plus-drum-transcription/issues"
+
+[project.scripts]
+adtof-transcribe = "adtof_plus_drum_transcription.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["adtof_plus_drum_transcription*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 100

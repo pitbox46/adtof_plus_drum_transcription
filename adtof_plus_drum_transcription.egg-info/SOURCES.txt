@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+adtof_plus_drum_transcription/__init__.py
+adtof_plus_drum_transcription/cli.py
+adtof_plus_drum_transcription/core.py
+adtof_plus_drum_transcription.egg-info/PKG-INFO
+adtof_plus_drum_transcription.egg-info/SOURCES.txt
+adtof_plus_drum_transcription.egg-info/dependency_links.txt
+adtof_plus_drum_transcription.egg-info/entry_points.txt
+adtof_plus_drum_transcription.egg-info/requires.txt
+adtof_plus_drum_transcription.egg-info/top_level.txt
