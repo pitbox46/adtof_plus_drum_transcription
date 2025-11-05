@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import traceback
 import sys
 from pathlib import Path
 from typing import List, Union
@@ -166,7 +167,7 @@ Examples:
             print(f"✓ Batch transcription completed! {len(audio_files)} files processed.")
     
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error: {e} - {traceback.format_exc()}")
         sys.exit(1)
 
 

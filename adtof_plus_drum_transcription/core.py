@@ -164,6 +164,9 @@ def transcribe_drums(audio_path, output_path, input_is_mix=True, default_thresho
             if label == "cymbals":
                 cymbals_loudness = loudness_values
 
+            if len(mid.instruments) == 0:
+                continue
+
             for n in mid.instruments[0].notes:
                 if n.pitch in [35, 38, 42, 49]:  # kick, snare and hh
                     # Only transcribe kicks from the kick stem, etc.
