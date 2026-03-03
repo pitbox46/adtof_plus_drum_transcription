@@ -1,2 +1,0 @@
-[console_scripts]
-adtof-transcribe = adtof_plus_drum_transcription.cli:main
